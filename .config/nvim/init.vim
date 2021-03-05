@@ -71,12 +71,12 @@ map sj <C-w>j
 map sl <C-w>l
 
 " Switch tabs (previous and next)
-nmap <silent> <tab>k :tabprev<CR>
-nmap <silent> <tab>j :tabnext<CR>
+nmap <silent> <tab>h :tabprev<CR>
+nmap <silent> <tab>l :tabnext<CR>
 
 " Change current tab position (previous and next)
-nmap <silent> <tab>h :-tabmove<CR>
-nmap <silent> <tab>l :+tabmove<CR>
+nmap <silent> <tab>k :-tabmove<CR>
+nmap <silent> <tab>j :+tabmove<CR>
 
 " Switch to tab by number
 nmap <tab>1 1gt
@@ -138,6 +138,12 @@ com! DIFF call s:DiffCurrentBufferWithSavedFile()
 "---------------------------------
 
 " Assign 'json' to 'jsonc' syntax automatically
-augroup JsonToJsonc
+augroup ExtJsonToJsonc
   autocmd! FileType json set filetype=jsonc
 augroup  END
+
+" Assign env files automatically
+augroup ExtDotEnv
+  autocmd BufNewFile,BufRead .env.* set syntax=sh
+  autocmd BufNewFile,BufRead .env.* set filetype=sh
+augroup END
