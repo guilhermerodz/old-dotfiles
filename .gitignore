@@ -1,0 +1,4 @@
+# Vim unwanted files
+.netrwhist
+/nvim/plugged
+/nvim/autoload
