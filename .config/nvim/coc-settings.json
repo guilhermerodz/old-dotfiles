@@ -1,0 +1,20 @@
+{
+  "suggest.noselect": false,
+  // Prettier (based on Standard styleguide)
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false
+  //"coc.preferences.formatOnSaveFiletypes": [
+  //"javascript",
+  //"typescript",
+  //"typescript.tsx",
+  //"typescriptreact",
+  //"javascriptreact",
+  //"json",
+  //"graphql"
+  //]
+}
