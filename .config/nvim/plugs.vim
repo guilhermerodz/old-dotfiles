@@ -47,6 +47,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Easy find and replace across multiple files
 "Plug 'dkprice/vim-easygrep'
 
+" Seamless navigation between tmux panes and vim splits
+Plug 'christoomey/vim-tmux-navigator'
+
 "---------------------------------
 " Syntax
 "---------------------------------
