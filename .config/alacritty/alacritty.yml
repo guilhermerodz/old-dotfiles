@@ -1,0 +1,43 @@
+window:
+  padding:
+    x: 10
+    y: 10
+
+font:
+  normal:
+    family: 'Jetbrains Mono'
+    style: 'Regular'
+  bold:
+    family: 'Jetbrains Mono'
+    style: 'Bold'
+  italic:
+    family: 'Jetbrains Mono'
+    style: 'Italic'
+
+# From https://raw.githubusercontent.com/fehawen/iterm2-material-theme/master/material-theme-darker.itermcolors
+colors:
+  primary:
+    background: '0x1d1d1d' # Custom Background (modified by me)
+    foreground: '0xeceff1'
+  normal:
+    black:   '0x000000'
+    red:     '0xe54b4b'
+    green:   '0x9ece58'
+    yellow:  '0xfaed70'
+    blue:    '0x396fe2'
+    magenta: '0xbb80b3'
+    cyan:    '0x2ddafd'
+    white:   '0xd0d0d0'
+  bright:
+    black:   '0x555864'
+    red:     '0xff5370'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0xffffff'
+
+key_bindings:
+  # Bind <C-m> for clearing terminal
+  - { key: M, mods: Control, chars: "\x0c" }
