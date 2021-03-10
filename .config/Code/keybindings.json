@@ -39,7 +39,6 @@
     "command": "-editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-
   // Duplicate cursor
   {
     "key": "ctrl+shift+up",
@@ -63,18 +62,22 @@
   },
 
   // NOTE: Please comment this section if VSCode-Vim extension is disabled.
-  // Remove default (Ctrl-N) VSCode keybinding (new file)
+  // Remove unused keybindings that conflicts with VSCode-Vim
   {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
   },
-  // Unbind all 'Ctrl + Shift + V' settings
   {
     "key": "ctrl+shift+v",
     "command": "-quicktype.pasteJSONAsTypesAndSerialization",
     "when": "editorTextFocus"
   },
-  // Vim Extension Mappings
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  // Multiple cursors
   {
     "key": "alt+d",
     "command": "editor.action.addSelectionToNextFindMatch",
@@ -113,5 +116,16 @@
   {
     "key": "shift+alt+k",
     "command": "workbench.action.moveEditorRightInGroup"
+  },
+  // Select suggestions with C-Shift-J and C-Shift-K
+  {
+    "key": "ctrl+shift+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   }
 ]
