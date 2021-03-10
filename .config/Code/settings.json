@@ -172,7 +172,8 @@
     },
     // Cut line by pressing '\d'
     {
-      "before": ["<leader>", "d"]
+      "before": ["<leader>", "d"],
+      "after": ["\"", "+", "dd"]
     },
     // Comment line by pressing '++'
     {
