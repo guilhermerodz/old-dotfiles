@@ -56,8 +56,8 @@
   // Editor Behavior
   "editor.selectionClipboard": false, // Only for Linux
   // Actions on save
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  // "editor.formatOnSave": false,
+  // "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   // Auto imports
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
