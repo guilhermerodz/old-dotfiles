@@ -207,6 +207,15 @@
       "before": ["<leader>", "p"],
       "after": ["\"", "+", "p"]
     },
+    // Jump to previous/next error in current file
+    {
+      "before": ["[", "g"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "g"],
+      "commands": ["editor.action.marker.next"]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Comment lines by pressing '++'
