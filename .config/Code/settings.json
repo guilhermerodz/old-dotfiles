@@ -1,0 +1,451 @@
+{
+  // Workbench
+  "workbench.startupEditor": "none",
+  // Appearance
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Dark Horizon",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // General font adjustments
+  "editor.letterSpacing": 0,
+  "editor.fontLigatures": true,
+  // Choose one
+  "editor.fontFamily": "Dank Mono",
+  // "editor.fontFamily": "JetBrains Mono",
+  // Terminal font adjustments
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+
+  // Files
+  "files.associations": {
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    ".prettierrc": "json",
+    ".babelrc": "json"
+  },
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/.svn": true,
+  //   "**/.hg": true,
+  //   "**/CVS": true,
+  //   "**/.DS_Store": true,
+  //   "node_modules": true
+  // },
+
+  // Good settings for recording tutorials
+  "editor.quickSuggestions": false,
+  "editor.mouseWheelZoom": true,
+  "editor.renderLineHighlight": "gutter",
+  "breadcrumbs.enabled": true,
+  "explorer.compactFolders": false,
+  "window.titleBarStyle": "custom", // "native" on Mac, "custom" on Windows
+  "window.menuBarVisibility": "toggle",
+
+  // General render settings
+  "editor.rulers": [80, 120],
+  "editor.minimap.enabled": false,
+  // Render all unwanted spaces
+  "editor.renderWhitespace": "all",
+
+  // Editor behavior
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  // Disable JS auto-import behavior
+  "javascript.updateImportsOnFileMove.enabled": "never",
+
+  // Editor Behavior
+  "editor.selectionClipboard": false, // Only for Linux
+  // Actions on save
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  // Auto imports
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  // Suggestions
+  "editor.suggestSelection": "first",
+  // Explorer Behavior
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // ESLint configuration
+  "eslint.packageManager": "yarn",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Prettier (based on Standard styleguide)
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+
+  // Emmet
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx" // Defines auto closing tags in JSX
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // Git integration settings
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Recommendation settings
+  "extensions.ignoreRecommendations": false, // Do not ignore recommendations
+
+  // Colorize Extension settings
+  // "colorize.languages": ["javascript", "typescript", "json", "html", "css"],
+
+  // Peacock Extension settings (customizable)
+  "peacock.favoriteColors": [
+    {
+      "name": "Rocketseat Purple",
+      "value": "#7159C1"
+    },
+    {
+      "name": "Dracula Dark",
+      "value": "#0B0A10"
+    }
+  ],
+
+  // Prettier Extension
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Tabnine Extension
+  "tabnine.experimentalAutoImports": true,
+
+  // Vim Extension
+  "editor.lineNumbers": "relative",
+  // Show the next match while entering a search
+  "vim.incsearch": true,
+  "vim.handleKeys": {
+    // Keep VSCode original behavior for Ctrl-W
+    "<C-w>": false,
+    // Force Vim Extension to map Ctrl-D and Ctrl-U correctly
+    "<C-d>": true,
+    "<C-u>": true
+  },
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // Exit Insert Mode by typing 'jk'
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    // Toggle side bar visibility
+    {
+      "after": ["C-n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Format document by pressing '\f'
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // Comment lines by pressing '++'
+    {
+      "before": ["+", "+"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    // Toggle panel visibility
+    {
+      "before": ["C-j"],
+      "commands": ["workbench.action.togglePanel"]
+    },
+    // Toggle side bar visibility
+    {
+      "before": ["C-n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Yank (copy) to clipboard directly
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
+    },
+    // Paste from clipboard directly
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "p"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Comment lines by pressing '++'
+    {
+      "before": ["+", "+"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Toggle side bar visibility
+    {
+      "before": ["C-n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Yank (copy) to clipboard directly
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
+    },
+    // Paste from clipboard directly
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "p"]
+    }
+  ],
+
+  // Setup cool italics for JavaScript & TypeScript
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "markup.changed",
+          "meta.diff.header.git",
+          "meta.diff.header.from-file",
+          "meta.diff.header.to-file"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "markup.deleted.diff",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "markup.inserted.diff",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "variable",
+        "settings": {}
+      },
+      {
+        "scope": ["punctuation.accessor", "keyword"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "storage",
+          "meta.var.expr",
+          "meta.class meta.method.declaration meta.var.expr storage.type.js",
+          "storage.type.property.js",
+          "storage.type.property.ts",
+          "storage.type.property.tsx"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "entity.other.inherited-class",
+        "settings": {}
+      },
+      {
+        "scope": "entity.name.function",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "entity.other.attribute-name",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "keyword.operator",
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": "keyword.operator.relational",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "meta.brace",
+        "settings": {}
+      },
+      {
+        "scope": "meta.delimiter.period",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "keyword.other.unit",
+        "settings": {}
+      },
+      {
+        "scope": "meta.selector",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "meta.property-name",
+        "settings": {}
+      },
+      {
+        "scope": ["entity.name.tag.doctype", "meta.tag.sgml.doctype"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["variable.other.object.property"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["entity.name.function"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator.comparison",
+          "keyword.control.flow.js",
+          "keyword.control.flow.ts",
+          "keyword.control.flow.tsx",
+          "keyword.control.loop.js",
+          "keyword.control.loop.ts",
+          "keyword.control.import.js",
+          "keyword.control.import.ts",
+          "keyword.control.import.tsx",
+          "keyword.control.from.js",
+          "keyword.control.from.ts",
+          "keyword.control.from.tsx",
+          "keyword.operator.instanceof.js",
+          "keyword.operator.expression.instanceof.ts",
+          "keyword.operator.expression.instanceof.tsx"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "italic",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "bold",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "quote",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "punctuation.definition.tag.html",
+        "settings": {}
+      },
+      {
+        "scope": "meta.tag.sgml.doctype.html",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "variable.other.object.js",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "markup.italic.markdown",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "markup.quote.markdown",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "keyword.control",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "bold",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": [
+          "punctuation.separator.hash.cs",
+          "keyword.preprocessor.region.cs",
+          "keyword.preprocessor.endregion.cs"
+        ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "markup.bold.markdown",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  // Maximize integrated terminal window
+  {
+    "key": "ctrl+shift+4",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  // Close integrated terminal window
+  {
+    "key": "ctrl+shift+6",
+    "command": "workbench.action.closePanel"
+  },
+
+  // Format document
+  {
+    "key": "ctrl+shift+i",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Duplicate lines
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Duplicate cursor
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+
+  // NOTE: Please comment this section if VSCode-Vim extension is disabled.
+  // Vim Extension Mappings
+  {
+    "key": "alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  // Pane navigation
+  {
+    "key": "alt-h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "alt-j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "alt-k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "alt-l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  // Tab navigation
+  {
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  // Remove default (Ctrl-N) VSCode keybinding (new file)
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  }
+]
