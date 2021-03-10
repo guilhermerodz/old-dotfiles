@@ -17,8 +17,8 @@ let g:NERDTreeMinimalUI = 1
 " Display arrows instead of ascii art in NERDTree
 let g:NERDTreeDirArrows = 1
 
-" Do not close NERDTree when files was opened
-"let g:NERDTreeQuitOnOpen = 0
+" Close NERDTree after file was opened
+let g:NERDTreeQuitOnOpen = 1
 
 " Tells the NERDTree to automatically remove
 " a buffer when a file is being deleted or renamed via
