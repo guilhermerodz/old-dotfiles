@@ -3,6 +3,7 @@
   "workbench.startupEditor": "none",
   // Appearance
   "workbench.sideBar.location": "left",
+  "workbench.panel.defaultLocation": "right",
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Dark Horizon",
   "workbench.iconTheme": "material-icon-theme",
@@ -12,9 +13,6 @@
   "editor.fontLigatures": true,
   // Choose one
   "editor.fontFamily": "Dank Mono",
-  // "editor.fontFamily": "JetBrains Mono",
-  // Terminal font adjustments
-  "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontFamily": "JetBrains Mono",
 
   // Files
@@ -172,7 +170,11 @@
       "before": ["<leader>", "f"],
       "commands": ["editor.action.formatDocument"]
     },
-    // Comment lines by pressing '++'
+    // Cut line by pressing '\d'
+    {
+      "before": ["<leader>", "d"],
+    },
+    // Comment line by pressing '++'
     {
       "before": ["+", "+"],
       "commands": ["editor.action.commentLine"]
@@ -207,6 +209,11 @@
     {
       "before": ["+", "+"],
       "commands": ["editor.action.commentLine"]
+    },
+    // Cut selection by pressing '\d'
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "+", "d"]
     },
     // Format selection by pressing '\f'
     {
