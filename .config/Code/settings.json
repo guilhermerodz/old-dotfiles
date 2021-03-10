@@ -11,8 +11,8 @@
   // General font adjustments
   "editor.letterSpacing": 0,
   "editor.fontLigatures": true,
-  // Choose one
   "editor.fontFamily": "Dank Mono",
+  "editor.fontSize": 14,
   "terminal.integrated.fontFamily": "JetBrains Mono",
 
   // Files
