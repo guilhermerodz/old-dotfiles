@@ -208,6 +208,11 @@
       "before": ["+", "+"],
       "commands": ["editor.action.commentLine"]
     },
+    // Format selection by pressing '\f'
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatSelection"]
+    },
     // Toggle side bar visibility
     {
       "before": ["C-n"],
