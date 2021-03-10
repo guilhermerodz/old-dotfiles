@@ -69,7 +69,7 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " GraphQL
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 
 "---------------------------------
 " Git
