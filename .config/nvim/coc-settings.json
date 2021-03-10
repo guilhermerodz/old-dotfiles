@@ -1,5 +1,7 @@
 {
   "suggest.noselect": false,
+  // ESLint
+  "eslint.autoFixOnSave": true,
   // Prettier (based on Standard styleguide)
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -7,7 +9,8 @@
   "prettier.arrowParens": "avoid",
   "prettier.endOfLine": "lf",
   "prettier.tabWidth": 2,
-  "prettier.useTabs": false
+  "prettier.useTabs": false,
+  // Format on save
   //"coc.preferences.formatOnSaveFiletypes": [
   //"javascript",
   //"typescript",
