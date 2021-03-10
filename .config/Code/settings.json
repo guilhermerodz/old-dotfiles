@@ -146,9 +146,9 @@
   // Show the next match while entering a search
   "vim.incsearch": true,
   "vim.handleKeys": {
-    // Keep VSCode original behavior for Ctrl-W
+    // Mapped by VSCode
     "<C-w>": false,
-    // Force Vim Extension to map Ctrl-D and Ctrl-U correctly
+    // Mapped by Vim Extension
     "<C-d>": true,
     "<C-u>": true
   },
@@ -172,7 +172,7 @@
     },
     // Cut line by pressing '\d'
     {
-      "before": ["<leader>", "d"],
+      "before": ["<leader>", "d"]
     },
     // Comment line by pressing '++'
     {
@@ -200,9 +200,13 @@
     },
     // Paste from clipboard directly
     {
+      "before": ["<leader>", "P"],
+      "after": ["\"", "+", "P"]
+    },
+    {
       "before": ["<leader>", "p"],
       "after": ["\"", "+", "p"]
-    }
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Comment lines by pressing '++'
