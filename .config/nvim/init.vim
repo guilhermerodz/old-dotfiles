@@ -49,6 +49,12 @@ set nowrap
 " Other settings
 set smarttab
 
+" Add convenient "clipboard copy/paste" shortcuts
+noremap <leader>y "+y
+noremap <leader>p "+p
+noremap <leader>Y "*y
+noremap <leader>P "*p
+
 "---------------------------------
 " Keybindings
 "---------------------------------
