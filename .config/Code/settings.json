@@ -160,7 +160,7 @@
     },
     // Toggle side bar visibility
     {
-      "after": ["C-n"],
+      "before": ["C-n"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     }
   ],
