@@ -1,0 +1,113 @@
+{
+  // ----------------------------------------------------------------
+  // Vim Extension Personal Settings
+  // ----------------------------------------------------------------
+  "editor.lineNumbers": "relative",
+  // Show the next match while entering a search
+  "vim.incsearch": true,
+  "vim.handleKeys": {
+    // Mapped by VSCode
+    "<C-w>": false,
+    // Mapped by Vim Extension
+    "<C-d>": true,
+    "<C-u>": true
+  },
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // Exit Insert Mode by typing 'jk'
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    // Toggle side bar visibility
+    {
+      "before": ["C-n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Format document by pressing '\f'
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // Cut line by pressing '\d'
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "+", "dd"]
+    },
+    // Comment line by pressing '++'
+    {
+      "before": ["+", "+"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    // Toggle panel visibility
+    {
+      "before": ["C-j"],
+      "commands": ["workbench.action.togglePanel"]
+    },
+    // Toggle side bar visibility
+    {
+      "before": ["C-n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Yank (copy) to clipboard directly
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
+    },
+    // Paste from clipboard directly
+    {
+      "before": ["<leader>", "P"],
+      "after": ["\"", "+", "P"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "p"]
+    },
+    // Jump to previous/next error in current file
+    {
+      "before": ["[", "g"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "g"],
+      "commands": ["editor.action.marker.next"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Comment lines by pressing '++'
+    {
+      "before": ["+", "+"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Cut selection by pressing '\d'
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "+", "d"]
+    },
+    // Format selection by pressing '\f'
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatSelection"]
+    },
+    // Toggle side bar visibility
+    {
+      "before": ["C-n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Yank (copy) to clipboard directly
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
+    },
+    // Paste from clipboard directly
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "p"]
+    }
+  ]
+}

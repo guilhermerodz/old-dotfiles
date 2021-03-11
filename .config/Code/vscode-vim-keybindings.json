@@ -1,0 +1,71 @@
+[
+  // ----------------------------------------------------------------
+  // Vim Extension Personal Shorcuts
+  // ----------------------------------------------------------------
+  // Remove unused keybindings that conflicts with VSCode-Vim
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-quicktype.pasteJSONAsTypesAndSerialization",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  // Multiple cursors
+  {
+    "key": "alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  // Pane navigation
+  {
+    "key": "alt-h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "alt-j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "alt-k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "alt-l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  // Tab navigation
+  {
+    "key": "shift+alt+h",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  // Select suggestions with C-Shift-J and C-Shift-K
+  {
+    "key": "ctrl+shift+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  }
+]
