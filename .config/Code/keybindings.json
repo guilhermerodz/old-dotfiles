@@ -1,16 +1,5 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  // Maximize integrated terminal window
-  {
-    "key": "ctrl+shift+4",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  // Close integrated terminal window
-  {
-    "key": "ctrl+shift+6",
-    "command": "workbench.action.closePanel"
-  },
-
   // Format document
   {
     "key": "ctrl+shift+i",
