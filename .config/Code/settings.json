@@ -1,11 +1,12 @@
 {
   // Workbench
   "workbench.startupEditor": "none",
-  // Appearance
+  // Layout
   "workbench.sideBar.location": "left",
   "workbench.panel.defaultLocation": "right",
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Dark Horizon",
+  // Appearance
+  "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
   "workbench.iconTheme": "material-icon-theme",
 
   // General font adjustments
@@ -50,10 +51,6 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
-  // Disable JS auto-import behavior
-  "javascript.updateImportsOnFileMove.enabled": "never",
-
-  // Editor Behavior
   "editor.selectionClipboard": false, // Only for Linux
   // Actions on save
   // "editor.formatOnSave": false,
@@ -61,11 +58,16 @@
   // Auto imports
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
+  // Auto update import on move
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
   // Suggestions
   "editor.suggestSelection": "first",
+
   // Explorer Behavior
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
+  // "explorer.autoReveal": false,
 
   // ESLint configuration
   "eslint.packageManager": "yarn",
@@ -122,116 +124,6 @@
 
   // Tabnine Extension
   "tabnine.experimentalAutoImports": true,
-
-  // Vim Extension
-  "editor.lineNumbers": "relative",
-  // Show the next match while entering a search
-  "vim.incsearch": true,
-  "vim.handleKeys": {
-    // Mapped by VSCode
-    "<C-w>": false,
-    // Mapped by Vim Extension
-    "<C-d>": true,
-    "<C-u>": true
-  },
-  "vim.insertModeKeyBindingsNonRecursive": [
-    // Exit Insert Mode by typing 'jk'
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    },
-    // Toggle side bar visibility
-    {
-      "before": ["C-n"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // Format document by pressing '\f'
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["editor.action.formatDocument"]
-    },
-    // Cut line by pressing '\d'
-    {
-      "before": ["<leader>", "d"],
-      "after": ["\"", "+", "dd"]
-    },
-    // Comment line by pressing '++'
-    {
-      "before": ["+", "+"],
-      "commands": ["editor.action.commentLine"]
-    },
-    {
-      "before": ["K"],
-      "commands": ["editor.action.showHover"]
-    },
-    // Toggle panel visibility
-    {
-      "before": ["C-j"],
-      "commands": ["workbench.action.togglePanel"]
-    },
-    // Toggle side bar visibility
-    {
-      "before": ["C-n"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    // Yank (copy) to clipboard directly
-    {
-      "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
-    },
-    // Paste from clipboard directly
-    {
-      "before": ["<leader>", "P"],
-      "after": ["\"", "+", "P"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "p"]
-    },
-    // Jump to previous/next error in current file
-    {
-      "before": ["[", "g"],
-      "commands": ["editor.action.marker.prev"]
-    },
-    {
-      "before": ["]", "g"],
-      "commands": ["editor.action.marker.next"]
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    // Comment lines by pressing '++'
-    {
-      "before": ["+", "+"],
-      "commands": ["editor.action.commentLine"]
-    },
-    // Cut selection by pressing '\d'
-    {
-      "before": ["<leader>", "d"],
-      "after": ["\"", "+", "d"]
-    },
-    // Format selection by pressing '\f'
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["editor.action.formatSelection"]
-    },
-    // Toggle side bar visibility
-    {
-      "before": ["C-n"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    // Yank (copy) to clipboard directly
-    {
-      "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
-    },
-    // Paste from clipboard directly
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "p"]
-    }
-  ],
 
   // Setup cool italics for JavaScript & TypeScript
   "editor.tokenColorCustomizations": {
