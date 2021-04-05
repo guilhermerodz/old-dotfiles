@@ -1,8 +1,9 @@
 {
+  // Autocompletion
   "suggest.noselect": false,
-  // ESLint
-  "eslint.autoFixOnSave": true,
+
   // Prettier (based on Standard styleguide)
+  // https://standardjs.com/
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "none",
@@ -10,7 +11,18 @@
   "prettier.endOfLine": "lf",
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
-  // Format on save
+
+  // Language Servers
+  "languageserver": {
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      // customize filetypes to your needs
+      "filetypes": ["typescript", "typescriptreact", "graphql", "prisma", "gql"]
+    }
+  }
+
+  // Save on Format
   //"coc.preferences.formatOnSaveFiletypes": [
   //"javascript",
   //"typescript",

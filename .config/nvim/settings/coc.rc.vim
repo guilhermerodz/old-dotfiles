@@ -1,12 +1,17 @@
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-graphql',
+  \
   \ 'coc-eslint',
   \ 'coc-prettier',
+  \
+  \ 'coc-tsserver',
+  \ 'coc-prisma',
   \ 'coc-json',
+  \ 'coc-css',
+  \ 'coc-vimlsp',
   \ ]
+
+  "\ 'coc-snippets',
 
 "---------------------------------
 " Keybindings
@@ -38,7 +43,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-net)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -59,9 +64,6 @@ endfunction
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
-
-" Remap for format selected region (visual and select mode)
-vmap <leader>f <Plug>(coc-format-selected)
 
 "---------------------------------
 " Config from README (https://github.com/neoclide/coc.nvim#example-vim-configuration)

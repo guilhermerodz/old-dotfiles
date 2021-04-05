@@ -46,14 +46,18 @@ set nowrap
 " Set tab label to show tab filename and '+' if modified
 :set guitablabel=\ %t\ %M
 
+" Highlight current line
+set cursorline
+
+" Keep N lines visible around the cursor position for X and Y axis
+set scrolloff=20
+set sidescrolloff=30
+
+" Make case insensitive search default
+set ic
+
 " Other settings
 set smarttab
-
-" Add convenient "clipboard copy/paste" shortcuts
-noremap <leader>y "+y
-noremap <leader>p "+p
-noremap <leader>Y "*y
-noremap <leader>P "*p
 
 "---------------------------------
 " Keybindings
@@ -75,6 +79,12 @@ map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
+
+" Add convenient "clipboard copy/paste" shortcuts
+noremap <leader>y "+y
+noremap <leader>p "+p
+noremap <leader>Y "*y
+noremap <leader>P "*p
 
 " Switch tabs (previous and next)
 nmap <silent> <tab>h :tabprev<CR>
@@ -98,18 +108,43 @@ nmap <tab>9 9gt
 " Toggle word wrap
 nnoremap <silent> <leader>w :set wrap!<cr>
 
-" Keep in visual mode after identing by shift
-:vnoremap < <gv
-:vnoremap > >gv
+" Keep in visual mode after indenting
+vnoremap < <gv
+vnoremap > >gv
 
-" Adds 'go to buffer' command
+" Fast indent current line in normal mode
+nnoremap < <<Space>
+nnoremap > ><Space>
+
+" Add 'go to buffer' command
 nnoremap gb :ls<CR>:b<Space>
 
 " Toggle between last edited file
 nnoremap gl :e #<CR>
+nnoremap <leader>\ :e #<CR>
 
 " Remove previous search highlight
 nnoremap <leader>/ :noh<CR>
+
+" Save current buffer (traditional way)
+nnoremap <C-s> :w<CR>
+vnoremap <C-s> :w<CR>
+
+" Quit current buffer (shortcut)
+nnoremap <leader>q :bd<CR>
+vnoremap <leader>q :bd<CR>
+
+" Force quit current buffer (shortcut)
+nnoremap <leader>Q :bd!<CR>
+vnoremap <leader>Q :bd!<CR>
+
+" Quit current window (shortcut)
+nnoremap <leader>x :q<CR>
+vnoremap <leader>x :q<CR>
+
+" Force quit current window (shortcut)
+nnoremap <leader>X :q!<CR>
+vnoremap <leader>X :q!<CR>
 
 "---------------------------------
 " Function as Keybinding
@@ -153,3 +188,47 @@ augroup ExtDotEnv
   autocmd BufNewFile,BufRead .env.* set syntax=sh
   autocmd BufNewFile,BufRead .env.* set filetype=sh
 augroup END
+
+" Trigger `autoread` when files changes on disk
+" and notificate after file change
+"autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+  "\ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+au FocusGained,BufEnter,CursorHold,CursorHoldI * :checktime | :mode
+
+"---------------------------------
+" Conflict Solving
+"---------------------------------
+
+" Solve conflict with file watchers (like Nodemon
+" or TS-Node-Dev)
+set backupcopy=yes
+
+" Solve conflict between Telescope.nvim and swap files
+set noswapfile
+
+"---------------------------------
+" Auto Start
+"---------------------------------
+
+" Returns the directory of the first file in `argv` or `cwd` if it's empty
+function FindSessionDirectory() abort
+  if len(argv()) > 0
+    return fnamemodify(argv()[0], ':p:h')
+  endif
+  return getcwd()
+endfunction
+let initial_session_cwd = FindSessionDirectory()
+
+" Set Vim working directory to be the same as the
+" first opened file
+autocmd VimEnter * exe 'cd' initial_session_cwd
+
+"---------------------------------
+" Providers
+"---------------------------------
+
+let g:loaded_python_provider = 0
+let g:loaded_python3_provider = 0
