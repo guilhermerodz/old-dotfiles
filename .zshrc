@@ -100,6 +100,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# ----------------------------------------
+# ZSH - Fixes
+# ----------------------------------------
+
+# Hide % on start
+unsetopt PROMPT_SP
+
+# ----------------------------------------
+# ZSH - Theme Options
+# ----------------------------------------
+
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -114,13 +125,17 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
-SPACESHIP_GIT_STATUS_SHOW=false
-SPACESHIP_USER_SHOW="always"                     # Shows System user name before directory name
+SPACESHIP_USER_SHOW="always" # Shows System user name before directory name
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-# SPACESHIP_PROMPT_SEPARATE_LINE=false           # Make the prompt span across two lines
-# SPACESHIP_DIR_TRUNC=1                          # Shows only the last directory folder name
-# SPACESHIP_CHAR_SYMBOL="❯"
-# SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_GIT_STATUS_SHOW=false
+# SPACESHIP_PROMPT_SEPARATE_LINE=false
+# SPACESHIP_DIR_TRUNC=1
+
+# ----------------------------------------
+# Plugin Manager - Zinit
+# ----------------------------------------
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -140,9 +155,15 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 
+# ----------------------------------------
+# Development Environment
+# ----------------------------------------
+
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Hide % on start
-unsetopt PROMPT_SP
+# Vim aliases (only for Neovim Nightly Release)
+alias vim='neovim'
+alias nvim='neovim'
