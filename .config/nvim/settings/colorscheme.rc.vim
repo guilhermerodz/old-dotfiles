@@ -1,25 +1,10 @@
 "-------------------------------
-" Material Theme
-"-------------------------------
-
-colorscheme material
-
-" Options are 'default' | 'palenight' | 'ocean'
-" 'lighter' | 'darker' | 'default-community'
-let g:material_theme_style = 'darker'
-
-let g:material_terminal_italics = 1
-
-"-------------------------------
 " Gruvbox
 "-------------------------------
 
 colorscheme gruvbox
 highlight Normal ctermbg=NONE
 
-"-------------------------------
-" Other themes
-"-------------------------------
-
-"colorscheme codedark
-"colorscheme jellybeans
+" Preferred (personal) visual highlight color
+" for better readability
+highlight Visual cterm=reverse ctermfg=239 ctermbg=223 gui=reverse guifg=#504945 guibg=#ebdbb2

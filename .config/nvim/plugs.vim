@@ -2,15 +2,17 @@
 " Appearance
 "---------------------------------
 
+" Fancy start screen for Vim
+Plug 'mhinz/vim-startify'
+
 " Color schemes
-"Plug 'tomasiser/vim-code-dark'
-"Plug 'nanotech/jellybeans.vim'
 Plug 'kaicataldo/material.vim', { 'branch': 'main'  }
 Plug 'morhetz/gruvbox'
 
 " Statusbar line
 Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+"Plug 'mengelbrecht/lightline-bufferline'
+Plug 'josa42/vim-lightline-coc'
 
 " Tmux statusbar line
 Plug 'edkolev/tmuxline.vim'
@@ -37,6 +39,15 @@ Plug 'tpope/vim-surround'
 " Text alignment tool
 Plug 'junegunn/vim-easy-align'
 
+" Focus mode (no distractions)
+Plug 'junegunn/limelight.vim'
+
+"---------------------------------
+" Window behavior
+"---------------------------------
+
+Plug 'szw/vim-maximizer'
+
 "---------------------------------
 " Navigation behavior
 "---------------------------------
@@ -51,12 +62,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'lambdalisue/fern-git-status.vim'
+" Nerdfont renderer for Fern
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-Plug 'lambdalisue/nerdfont.vim'
-Plug 'lambdalisue/glyph-palette.vim'
-
-" Fuzzy find files
-"Plug 'ctrlpvim/ctrlp.vim'
 
 " Easy find and replace across multiple files
 "Plug 'dkprice/vim-easygrep'
@@ -112,7 +119,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 " Git blamer inspired by VSCode's GitLens plugin
-Plug 'APZelos/blamer.nvim'
+" Plug 'APZelos/blamer.nvim'
 
 " Diff markers
 Plug 'airblade/vim-gitgutter'
+
+"---------------------------------
+" Nerdfont and Devicons
+"---------------------------------
+
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'kyazdani42/nvim-web-devicons'

@@ -130,21 +130,13 @@ nnoremap <leader>/ :noh<CR>
 nnoremap <C-s> :w<CR>
 vnoremap <C-s> :w<CR>
 
-" Quit current buffer (shortcut)
+" Try quit current buffer (shortcut)
 nnoremap <leader>q :bd<CR>
 vnoremap <leader>q :bd<CR>
 
-" Force quit current buffer (shortcut)
-nnoremap <leader>Q :bd!<CR>
-vnoremap <leader>Q :bd!<CR>
-
-" Quit current window (shortcut)
+" Try quit current window (shortcut)
 nnoremap <leader>x :q<CR>
 vnoremap <leader>x :q<CR>
-
-" Force quit current window (shortcut)
-nnoremap <leader>X :q!<CR>
-vnoremap <leader>X :q!<CR>
 
 "---------------------------------
 " Function as Keybinding
@@ -179,12 +171,12 @@ com! DIFF call s:DiffCurrentBufferWithSavedFile()
 "---------------------------------
 
 " Assign 'json' to 'jsonc' syntax automatically
-augroup ExtJsonToJsonc
-  autocmd! FileType json set filetype=jsonc
+augroup SupportJsonC
+  autocmd! BufRead,BufNewFile tsconfig.json,coc-settings.json set filetype=jsonc
 augroup  END
 
 " Assign env files automatically
-augroup ExtDotEnv
+augroup SupportDotEnv
   autocmd BufNewFile,BufRead .env.* set syntax=sh
   autocmd BufNewFile,BufRead .env.* set filetype=sh
 augroup END

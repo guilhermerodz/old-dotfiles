@@ -4,15 +4,46 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Add :Format command to trigger format action
 command! -nargs=0 Format :call CocAction('format')
 
+let g:prettierSupportedFiletypes = [
+  \ 'javascript',
+  \ 'mongo',
+  \ 'javascript',
+  \ 'javascriptreact',
+  \ 'typescript',
+  \ 'typescriptreact',
+  \ 'json',
+  \ 'json',
+  \ 'jsonc',
+  \ 'json5',
+  \ 'css',
+  \ 'postcss',
+  \ 'less',
+  \ 'scss',
+  \ 'handlebars',
+  \ 'graphql',
+  \ 'markdown',
+  \ 'mdx',
+  \ 'html',
+  \ 'html',
+  \ 'html',
+  \ 'vue',
+  \ 'yaml',
+  \ 'ansible',
+  \ 'home-assistant',
+  \ ]
+
 " Keybindings
 func! TryFormat()
   let filetype = &filetype
-  if filetype == 'prisma'
-    echom "Formatting with CoC..."
-    execute "Format"
-  else
+
+  let isSupportedByPrettier = index(g:prettierSupportedFiletypes, filetype) >= 0
+
+  if isSupportedByPrettier
     echom "Formatting with Prettier..."
     execute "Prettier"
+  else
+    echom "Formatting with CoC..."
+    execute "Format"
   endif
 endfunc
 

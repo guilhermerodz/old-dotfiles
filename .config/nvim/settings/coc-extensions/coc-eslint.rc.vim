@@ -1,4 +1,4 @@
-" Add :Prettier to trigger prettier extension command
+" Add command to trigger eslint extension
 command! -nargs=0 EslintAutofix :CocCommand eslint.executeAutofix
 
 " Keybindings
