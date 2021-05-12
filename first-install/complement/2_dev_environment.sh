@@ -54,7 +54,7 @@ read APPLY_DOTFILES
 if [[ $APPLY_DOTFILES == y* ]]; then
   echo "Proceeding to apply your dotfiles..."
 
-  # Store this Git repository root directory
+  # Store this Git repository root directory inside a variable
   DOTFILES_DIR=$(git rev-parse --show-toplevel)
 
   # Copy files inside $DOTFILES_DIR to the $HOME
@@ -73,3 +73,6 @@ echo "--------------------------------------\n"
 echo "Instalation complete."
 echo "You can now enjoy your preferred apps:\n"
 echo "> sudo snap install discord spotify insomnia dbeaver-ce\n"
+echo "Please note that your sublevel dotfiles are still not applied for security reasons."
+echo "You can manually copy your dotfiles, for example:\n"
+echo "> cp -r .config/nvim ~/.config/nvim\n"

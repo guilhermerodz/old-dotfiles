@@ -42,8 +42,8 @@ fi
 # Make .zshrc append sourcefile
 # -----------------------------------------
 
-if ! grep -F "[ -f .zshrc.sourcefile ] && source .zshrc.sourcefile # Load my personal configuration" $HOME/.zshrc; then
-  echo "\n[ -f .zshrc.sourcefile ] && source .zshrc.sourcefile # Load my personal configuration" | tee -a $HOME/.zshrc
+if ! grep -F "[ -f $HOME/.zshrc.sourcefile ] && source $HOME/.zshrc.sourcefile # Load my personal configuration" $HOME/.zshrc; then
+  echo "\n[ -f $HOME/.zshrc.sourcefile ] && source $HOME/.zshrc.sourcefile # Load my personal configuration" | tee -a $HOME/.zshrc
 fi
 
 # -----------------------------------------
