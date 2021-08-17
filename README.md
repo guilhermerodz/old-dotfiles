@@ -1,5 +1,7 @@
 # Personal Dotfiles Management
 
+Note: look at the branch name before applying this to your O.S.
+
 ## Requirements
 
 - `git`
