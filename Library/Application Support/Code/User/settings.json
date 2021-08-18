@@ -1,0 +1,184 @@
+{
+  // Startup
+  "workbench.startupEditor": "none",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Night Owl",
+  "security.workspace.trust.untrustedFiles": "open",
+  // Layout
+  "workbench.sideBar.location": "left",
+  "workbench.panel.defaultLocation": "right",
+  "workbench.activityBar.visible": true,
+  "editor.letterSpacing": 0,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Dank Mono",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "SF Mono Powerline",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.tabs.enabled": false,
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.hg/store/**": true
+  },
+
+  // Files
+  "files.associations": {
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    ".prettierrc": "json",
+    ".babelrc": "json"
+  },
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/.svn": true,
+  //   "**/.hg": true,
+  //   "**/CVS": true,
+  //   "**/.DS_Store": true,
+  //   "node_modules": true
+  // },
+
+  // Good settings for recording tutorials
+  "editor.quickSuggestions": false,
+  "editor.mouseWheelZoom": true,
+  "editor.renderLineHighlight": "gutter",
+  "breadcrumbs.enabled": true,
+  "explorer.compactFolders": false,
+  "window.menuBarVisibility": "toggle", // Only for Linux
+
+  // General render settings
+  "editor.rulers": [80, 120],
+  "editor.minimap.enabled": false,
+  // Render all unwanted spaces
+  "editor.renderWhitespace": "boundary",
+
+  // Editor behavior
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.selectionClipboard": false, // Only for Linux
+  // Actions on save
+  // "editor.formatOnSave": false,
+  // "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  // Auto imports
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  // Auto update import on move
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  // Suggestions
+  "editor.suggestSelection": "first",
+
+  // Explorer Behavior
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  // "explorer.autoReveal": false,
+
+  // Accessibility
+  "editor.accessibilitySupport": "on",
+
+  // -----------------------------
+  // Plugins
+  // -----------------------------
+
+  // ESLint configuration
+  "eslint.packageManager": "yarn",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Prettier (based on Standard styleguide)
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+
+  // Emmet
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx", // Defines auto closing tags in JSX
+    "typescript": "tsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // Git integration settings
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.autorefresh": true,
+
+  // Recommendation settings
+  "extensions.ignoreRecommendations": false, // Do not ignore recommendations
+
+  // Colorize Extension settings
+  "colorize.languages": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "html",
+    "css",
+    "sass",
+    "less",
+    "scss",
+    "postcss",
+    "sss",
+    "stylus",
+    "svg",
+    "xml"
+  ],
+
+  // Prettier Extension
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Fix for Github Copilot
+    "editor.autoClosingBrackets": "languageDefined"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Fix for Github Copilot
+    "editor.autoClosingBrackets": "languageDefined"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Fix for Github Copilot
+    "editor.autoClosingBrackets": "languageDefined"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // Fix for Github Copilot
+    "editor.autoClosingBrackets": "languageDefined"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Tabnine Extension
+  "tabnine.experimentalAutoImports": true,
+
+  // Github Copilot Extension
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  }
+}
