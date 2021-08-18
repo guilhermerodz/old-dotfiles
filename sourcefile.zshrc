@@ -36,12 +36,9 @@ SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_GIT_STATUS_SHOW=false
 
 # ----------------------------------------
-# Aliases
+# Personal Dotfiles Manager
 # ----------------------------------------
 
-# Personal Dotfiles Manager
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias dfiles="dotfiles"
 alias dfl="dotfiles"
-
-alias vim="nvim"
