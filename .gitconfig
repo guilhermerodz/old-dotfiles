@@ -3,26 +3,21 @@
 	email = guilherme.rodrigues.profissional@gmail.com
 
 [alias]
-	ps = push
-	pom = push origin master -u
+	p = push
 
-	ci = commit
-	# Commit with Message
-	cm = "!f() { git commit -m \"$*\"; }; f"
+	c = commit
 
+	# List all branches
+	lb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	co = checkout
 	# New Branch
 	nb = checkout -b
-	# Switch Branch (keep work)
-	sb = switch -c
 	# Delete Branch
 	db = branch -D
 
-	st = status -sb
-	sf = show --name-only
-	lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
-	# List all branches
-	lb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	s = status -sb
+	sh = show --name-only
+	l = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
 
 	# List incoming & outgoing commits (compares to remote)
 	incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
@@ -34,3 +29,7 @@
 
 	# Undo the last commit but keep changes
 	rollback = reset --soft HEAD~1
+
+[pull]
+	# Fast=forward without creating new commits
+	ff = only
