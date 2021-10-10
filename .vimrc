@@ -1,33 +1,45 @@
 "---------------------------------
+" JK Trick
+"---------------------------------
+
+" Typing 'jk' in insert mode equals to <Esc>
+inoremap jk <Esc>
+
+"---------------------------------
 " Options
 "---------------------------------
+
+syntax on
 
 " Show relative line numbers but keep absolute number
 " for the current line
 set number
 set relativenumber
 
-" Enables automatic C program indenting
-set cindent
-
-" Always uses spaces instead of tab characters
-set expandtab
-
-" Show (partial) command in the last line of the screen
-set showcmd
-
-" Number of spaces that a <tab> in the file counts for
-set tabstop=2
-set shiftwidth=2
-
+" Display line and column of cursor position
+set ruler
 " Highlight unwanted spaces
 set list
 
-" Add ruler at specified column number
-" set colorcolumn=80
-
 " Prevent line wrap
 set nowrap
+
+" Indentation helper. See :h smartindent
+set smartindent
+
+set expandtab " Use spaces instead of tabs
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
+" Show (partial) command in the last line of the screen
+set showcmd
+set cmdheight=1
+set showmode
+
+" Add ruler at specified column number
+" set colorcolumn=80
 
 " Set tab label to show tab filename and '+' if modified
 :set guitablabel=\ %t\ %M
@@ -36,14 +48,21 @@ set nowrap
 set cursorline
 
 " Keep N lines visible around the cursor position for X and Y axis
-set scrolloff=20
-set sidescrolloff=30
+set scrolloff=8
+set sidescrolloff=8
 
-" Make case insensitive search default
-set ic
+set updatetime=100
 
-" Other settings
-set smarttab
+" Search defaults to ignore case
+set ignorecase
+" File and directory completion defaults to ignore case
+set wildignorecase
+
+" Use :h shortmess to see what each flag means
+set shortmess+=Am
+
+" Hide buffers instead of abandoning windows
+set hidden
 
 "---------------------------------
 " Keybindings
@@ -54,16 +73,15 @@ nmap ss :split<CR><C-w>w
 nmap sv :vsplit<CR><C-w>w
 
 " Navigate between windows
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
+"map sh <C-w>h
+"map sk <C-w>k
+"map sj <C-w>j
+"map sl <C-w>l
 
 " Add convenient "clipboard copy/paste" shortcuts
 noremap <leader>y "+y
 noremap <leader>p "+p
-noremap <leader>Y "*y
-noremap <leader>P "*p
+noremap <leader>P "+P
 
 " Switch tabs (previous and next)
 nmap <silent> <tab>h :tabprev<CR>
@@ -80,10 +98,6 @@ nnoremap <silent> <leader>w :set wrap!<cr>
 vnoremap < <gv
 vnoremap > >gv
 
-" Fast indent current line in normal mode
-nnoremap < <<Space>
-nnoremap > ><Space>
-
 " Add 'go to buffer' command
 nnoremap gb :ls<CR>:b<Space>
 
@@ -93,14 +107,3 @@ nnoremap <leader>\ :e #<CR>
 
 " Remove previous search highlight
 nnoremap <leader>/ :noh<CR>
-
-"---------------------------------
-" JK Trick
-"---------------------------------
-
-" Typing 'jk' in insert mode equals to <Esc>
-inoremap jk <Esc>
-
-" j/k will move virtual lines (lines that wrap)
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')

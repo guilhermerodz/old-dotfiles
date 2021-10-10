@@ -1,6 +1,6 @@
 [user]
-	name = Guilherme
-	email = guilherme.rodrigues.profissional@gmail.com
+	name = Guilherme Rodz
+	email = gui.rodz.dev@gmail.com
 
 [alias]
 	p = push
@@ -9,6 +9,8 @@
 
 	# List all branches
 	lb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	# Show current branch
+	sb = branch --show-current
 	co = checkout
 	# New Branch
 	nb = checkout -b

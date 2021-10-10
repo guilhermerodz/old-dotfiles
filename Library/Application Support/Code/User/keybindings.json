@@ -50,6 +50,16 @@
     "command": "workbench.action.lastEditorInGroup"
   },
 
+  // Rearrange tabs
+  {
+    "key": "ctrl+shift+left",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+
   // Editor zoom in & out
   {
     "key": "alt+=",
@@ -69,6 +79,26 @@
     "command": "-increaseSearchEditorContextLines",
     "when": "inSearchEditor"
   },
+
+  // Parameter Hints alias
+  {
+    "key": "shift+ctrl+space",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+
+  // Show hover
+  {
+    "key": "alt+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+
+  // ---------------------------------------
+  // Intentionally replace official keybindings that I don't use
+  // ---------------------------------------
+
+  { "key": "ctrl+w", "command": "-workbench.action.switchWindow" },
 
   // ---------------------------------------
   // Replacements for bindings that were overwritten

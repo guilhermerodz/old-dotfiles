@@ -3,19 +3,19 @@
   "workbench.startupEditor": "none",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Night Owl",
   "security.workspace.trust.untrustedFiles": "open",
   // Layout
   "workbench.sideBar.location": "left",
   "workbench.panel.defaultLocation": "right",
   "workbench.activityBar.visible": true,
-  "editor.letterSpacing": 0,
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "Dank Mono",
+  "workbench.editor.wrapTabs": true,
+  "editor.fontFamily": "Dank Mono", // Other cool fonts: 'JetBrains Mono' or 'SF Mono'
   "editor.fontSize": 14,
+  "editor.letterSpacing": 0.4,
+  "editor.lineHeight": 1.7,
   "terminal.integrated.fontFamily": "SF Mono Powerline",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.tabs.enabled": false,
+  "editor.fontLigatures": true,
 
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -51,8 +51,11 @@
   // General render settings
   "editor.rulers": [80, 120],
   "editor.minimap.enabled": false,
-  // Render all unwanted spaces
-  "editor.renderWhitespace": "boundary",
+  "editor.bracketPairColorization.enabled": true,
+  // Helps focusing
+  "editor.highlightActiveIndentGuide": false,
+  // Option to render unwanted spaces
+  "editor.renderWhitespace": "trailing", // I was used to 'boundary'
 
   // Editor behavior
   "editor.tabSize": 2,
@@ -60,6 +63,7 @@
   "editor.detectIndentation": true,
   "editor.inlineSuggest.enabled": true,
   "editor.selectionClipboard": false, // Only for Linux
+  "editor.cursorSurroundingLines": 8,
   // Actions on save
   // "editor.formatOnSave": false,
   // "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
@@ -77,7 +81,7 @@
   "explorer.confirmDelete": false,
   // "explorer.autoReveal": false,
 
-  // Accessibility
+  // Accessibilityj
   "editor.accessibilitySupport": "on",
 
   // -----------------------------
@@ -180,5 +184,6 @@
     "yaml": false,
     "plaintext": false,
     "markdown": false
-  }
+  },
+  "workbench.colorTheme": "Night Owl"
 }
