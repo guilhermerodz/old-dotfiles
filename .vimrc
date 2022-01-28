@@ -20,6 +20,9 @@ set relativenumber
 set ruler
 " Highlight unwanted spaces
 set list
+set listchars=tab:\ \ ,eol:$
+" Highlight search
+set hlsearch
 
 " Prevent line wrap
 set nowrap

@@ -9,11 +9,11 @@
   "workbench.panel.defaultLocation": "right",
   "workbench.activityBar.visible": true,
   "workbench.editor.wrapTabs": true,
-  "editor.fontFamily": "Dank Mono", // Other cool fonts: 'JetBrains Mono' or 'SF Mono'
+  "editor.fontFamily": "JetBrains Mono", // Cool fonts: 'Dank Mono', 'JetBrains Mono' or 'SF Mono'
   "editor.fontSize": 14,
   "editor.letterSpacing": 0.4,
   "editor.lineHeight": 1.7,
-  "terminal.integrated.fontFamily": "SF Mono Powerline",
+  // "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.fontSize": 14,
   "editor.fontLigatures": true,
 
@@ -46,7 +46,7 @@
   "editor.renderLineHighlight": "gutter",
   "breadcrumbs.enabled": true,
   "explorer.compactFolders": false,
-  "window.menuBarVisibility": "toggle", // Only for Linux
+  // "window.menuBarVisibility": "toggle", // Only for Linux
 
   // General render settings
   "editor.rulers": [80, 120],
@@ -174,6 +174,9 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
 
   // Tabnine Extension
   "tabnine.experimentalAutoImports": true,
@@ -181,9 +184,46 @@
   // Github Copilot Extension
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": false,
     "markdown": false
   },
-  "workbench.colorTheme": "Night Owl"
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // Java Extensions
+  "redhat.telemetry.enabled": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "java.maven.downloadSources": true,
+  "java.signatureHelp.enabled": true,
+
+  // C/C++ Extension
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+
+  // clangd (the alternative) Extension
+  "clangd.path": "/Users/guilhermerodz/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "workbench.colorTheme": "Night Owl",
+
+  // Vim Extension
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  // Rust Extension
+  "rust-client.engine": "rust-analyzer",
 }
